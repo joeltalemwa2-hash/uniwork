@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f4">
+  <title>Information & Policies | UniWork</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --paper:#f8f8f4; --ink:#17231f; --muted:#68716b; --line:#dfe3dc; --green:#28634d; --coral:#f26745; --lime:#d3f177; --sans:"DM Sans","Segoe UI",sans-serif; --display:"Space Grotesk","Segoe UI",sans-serif; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.7 var(--sans); }
+    a { color:inherit; text-decoration:none; }
+    a:hover { color:var(--coral); }
+    .wrap { width:min(1100px,calc(100% - 48px)); margin:auto; }
+    .header { position:sticky; top:0; z-index:2; border-bottom:1px solid var(--line); background:#f8f8f4ed; backdrop-filter:blur(12px); }
+    .nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { display:flex; align-items:center; gap:9px; font:700 20px var(--display); letter-spacing:-.06em; }
+    .mark { width:30px; height:30px; display:grid; place-items:center; border-radius:9px 9px 9px 3px; background:var(--coral); color:white; letter-spacing:0; }
+    .brand em { color:var(--coral); font-style:normal; }
+    .navlinks { display:flex; flex-wrap:wrap; gap:20px; font-size:12px; font-weight:600; }
+    .intro { padding:58px 0 44px; border-bottom:1px solid var(--line); }
+    .eyebrow { color:var(--green); font-size:10px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { max-width:700px; margin:11px 0; font:600 clamp(38px,6vw,62px)/1.02 var(--display); letter-spacing:-.065em; }
+    h1 span { color:var(--coral); font-family:Georgia,serif; font-style:italic; font-weight:400; }
+    .intro p { max-width:640px; margin:0; color:var(--muted); }
+    .content { display:grid; grid-template-columns:190px minmax(0,1fr); gap:54px; padding:38px 0 80px; }
+    .index { position:sticky; top:92px; align-self:start; display:grid; gap:4px; }
+    .index strong { margin-bottom:7px; font:600 13px var(--display); }
+    .index a { padding:5px 8px; border-left:2px solid transparent; color:var(--muted); font-size:12px; }
+    .index a:hover { border-color:var(--coral); color:var(--ink); }
+    .docs section { padding:0 0 35px; margin-bottom:35px; border-bottom:1px solid var(--line); scroll-margin-top:95px; }
+    .docs section:last-child { margin-bottom:0; }
+    .docs h2 { margin:6px 0 12px; font:600 28px/1.16 var(--display); letter-spacing:-.045em; }
+    .docs h3 { margin:19px 0 5px; font:600 15px var(--display); }
+    .docs p,.docs li { max-width:730px; color:#505c54; font-size:13px; }
+    .docs ul { padding-left:20px; }
+    .docs li { padding:2px 0; }
+    .note { margin:16px 0; padding:13px 15px; border-left:3px solid var(--coral); background:#f0f1e9; color:#455149; font-size:12px; }
+    .draft { display:inline-flex; margin-left:8px; padding:3px 7px; background:#f7e9df; color:#924526; font:700 9px var(--sans); letter-spacing:.08em; vertical-align:middle; text-transform:uppercase; }
+    .placeholder { color:#98502f !important; font-weight:700; }
+    .footer { padding:19px 0; border-top:1px solid var(--line); color:var(--muted); font-size:11px; }
+    .footerinner { display:flex; justify-content:space-between; gap:16px; }
+    .footerinner p { margin:0; }
+    @media(max-width:700px) { .wrap{width:calc(100% - 34px)} .nav{align-items:flex-start; flex-direction:column; padding:13px 0} .navlinks{gap:7px 15px} .intro{padding:40px 0 30px} .content{grid-template-columns:1fr; gap:24px; padding-top:24px} .index{position:static; display:flex; flex-wrap:wrap; align-items:center; gap:3px 8px} .index strong{width:100%} .index a{padding:3px 6px} .docs h2{font-size:24px} .footerinner{flex-direction:column} }
+    @media print { .header,.index,.footer { display:none !important; } .wrap{width:100%} .intro{padding:0 0 18px} .content{display:block;padding:18px 0} .docs section{break-inside:avoid} body{background:white;color:#111} }
+  </style>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="header"><div class="wrap nav"><a class="brand" href="/"><span class="mark">u.</span><span>uni<em>work</em></span></a><nav class="navlinks" aria-label="Site navigation"><a href="/#opportunities">Find work</a><a href="/forms.html">Printable forms</a><a data-account-link href="/account.html">Log in</a><a href="/">Home</a></nav></div></header>
+  <main>
+    <div class="intro"><div class="wrap"><div class="eyebrow">UniWork · Uganda</div><h1>Useful information.<br><span>Clear expectations.</span></h1><p>Learn about UniWork, find guidance for students and employers, or review the policy drafts. Replace the marked details and have the legal pages reviewed before publishing.</p></div></div>
+    <div class="wrap content">
+      <nav class="index" aria-label="On this page"><strong>On this page</strong><a href="#about">About UniWork</a><a href="#students">For students</a><a href="#employers">For employers</a><a href="#application-data">Applications &amp; data</a><a href="#contact">Contact</a><a href="#privacy">Privacy draft</a><a href="#terms">Terms draft</a><a href="#cookies">Cookie draft</a></nav>
+      <div class="docs">
+        <section id="about"><div class="eyebrow">Our purpose</div><h2>About UniWork</h2><p>UniWork is a student-focused jobs platform for Uganda, designed to help university students discover internships and flexible work while helping employers connect with emerging talent.</p><p>Listings marked as samples are examples only and cannot receive applications. Employer-submitted listings become available only after the site owner approves them.</p></section>
+        <section id="application-data"><div class="eyebrow">Application information</div><h2>What happens when you apply</h2><p>Your student account identity, selected role, optional message, status, and submission time are stored by the site. The employer who owns that role can see your name and email address, message, and application status so they can respond to you. Other employers cannot view your application. The site owner can operate and moderate the platform.</p><p>Applications are unavailable on sample listings. Account creation currently does not send email verification or password-reset messages. For account help or a data request, use the official privacy contact published by the site operator. The offline app cache contains public page files only; it excludes account and application API responses.</p></section>
+        <section id="students"><div class="eyebrow">Start with care</div><h2>For students</h2><p>Explore roles that suit your skills, interests, location, and study schedule. Before sharing personal information or accepting an offer, contact the employer through a channel you can independently verify.</p><ul><li>Confirm the employer, role, pay, hours, work location, and any costs before you agree.</li><li>Do not pay a recruiter to apply or to secure an interview without independently checking the request.</li><li>Share only the information needed for an application, and keep a copy of the role details and your communications.</li><li>Ask questions about supervision, learning outcomes, and how the work fits with your studies.</li></ul><p>Create a student account to apply to approved listings and track your applications. Sample roles are for preview only and do not accept applications.</p></section>
+        <section id="employers"><div class="eyebrow">Work with students</div><h2>For employers</h2><p>Write clear, inclusive opportunities that help students make an informed decision. Include responsibilities, required skills, location, schedule, compensation, duration, and the application process.</p><ul><li>Provide accurate company and role information, and update or close opportunities when they are no longer available.</li><li>Describe pay, hours, eligibility, and any costs or equipment requirements plainly.</li><li>Collect only the applicant information you need, secure it, and explain how long you will keep it.</li><li>Use a fair selection process and communicate next steps promptly.</li></ul><p>Create an employer account to submit a listing for owner review. Approved listings appear on the home page; use the printable brief to prepare role details.</p><a href="/account.html?mode=register">Create an employer account ↗</a> &nbsp; <a href="/forms.html">Open printable forms ↗</a></section>
+        <section id="contact"><div class="eyebrow">Get in touch</div><h2>Contact UniWork</h2><p>Questions about an opportunity, account, or partnership? Add the official support details below before launch.</p><p class="placeholder">Support email: [add your official email address]</p><p class="placeholder">Business name and postal address: [add registered details]</p><p class="placeholder">Expected response time: [add your support hours or response target]</p></section>
+        <section id="privacy"><div class="eyebrow">Policy document</div><h2>Privacy notice <span class="draft">Draft · review required</span></h2><div class="note">Do not publish this draft unchanged. Confirm the legal data controller, live services, collected data, vendors, retention periods, security practices, and user-rights contact with a qualified privacy adviser.</div><p><strong>Effective date:</strong> <span class="placeholder">[insert date]</span><br><strong>Data controller:</strong> <span class="placeholder">[insert registered entity and address]</span><br><strong>Privacy contact:</strong> <span class="placeholder">[insert monitored email address]</span></p><h3>Information used by this release</h3><p>Student and employer accounts store a name, email address, role, and a password hash. The server uses a necessary, HttpOnly session cookie to keep an account signed in for up to seven days. When a student applies, the job, student account, application message, status, and submission time are stored. Employer-submitted listings and their review status are stored so the owner can review and publish them. The server stores this information in its SQLite database; the operator is responsible for securing and backing up that database.</p><p>Printable form fields are not submitted to the server. The site loads fonts and a photograph from third-party services; those requests may disclose standard connection information to those providers. This release does not include analytics or advertising tools. Confirm these details against the deployed configuration.</p><h3>Complete before public launch</h3><p>Insert the registered controller and monitored privacy contact. Decide and publish the lawful purposes and bases for each use; retention and deletion periods; access controls and safeguards; any service providers or international transfers; account closure and data-access/correction/deletion request procedures; complaint routes; and any age or eligibility rules. Add an email-verification and account-recovery process if you implement one. Review the final notice against applicable Ugandan data-protection requirements, including the Data Protection and Privacy Act, 2019, and rules that apply to your operations. This draft is not legal advice.</p></section>
+        <section id="terms"><div class="eyebrow">Policy document</div><h2>Terms of use <span class="draft">Draft · review required</span></h2><div class="note">Replace the operator, contact, fees, eligibility, dispute, and liability terms with your actual operating rules and have the document reviewed before launch.</div><p><strong>Operator:</strong> <span class="placeholder">[insert registered entity and address]</span><br><strong>Effective date:</strong> <span class="placeholder">[insert date]</span></p><h3>Platform role</h3><p>UniWork connects student and employer accounts and displays employer-submitted opportunities after owner review. Unless a written agreement says otherwise, the platform does not employ candidates, make hiring decisions, guarantee that a listing is accurate, or promise an interview or job. Sample listings are illustrative and cannot receive applications.</p><h3>Accounts and applications</h3><p>Account holders are responsible for keeping their sign-in details private and providing accurate information. Student applications store the applicant account, selected role, optional message, status, and submission time. Employers are responsible for accurate listings and their own recruitment and applicant-data practices. Students should verify opportunities before sharing information or accepting work.</p><h3>Fees, moderation, and disputes</h3><p class="placeholder">[State whether posting or using the service is free or paid, how fees are disclosed, listing review/removal and account suspension rules, intellectual-property permissions, service availability, liability limits, complaint handling, governing law, and dispute process.]</p><p>Have a qualified adviser adapt these terms to the actual service and applicable law in Uganda before publication.</p></section>
+        <section id="cookies"><div class="eyebrow">Policy document</div><h2>Cookie and storage notice <span class="draft">Draft · review required</span></h2><div class="note">Update this notice whenever analytics, advertising, sign-in, or other third-party services are added.</div><p>After sign-in, UniWork sets a necessary session cookie named <code>uniwork_session</code>. It is HttpOnly, uses SameSite=Strict, and expires after seven days. The Secure attribute is enabled in production when the site is served over HTTPS. Clearing browser site data signs the user out. The local administrator/editor no longer saves page content in browser storage.</p><p>This release does not include analytics or advertising cookies. The page loads fonts and an image from external providers; those requests may send standard connection data to the provider. Confirm provider behavior and list any new storage or cookies after deployment.</p><p class="placeholder">[Before launch, document each cookie or storage technology, its purpose and duration, provider, and whether consent is required. Add a consent mechanism before enabling any non-essential tracking where applicable.]</p></section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="wrap footerinner"><p>UniWork · policy drafts require review before publication.</p><p><a href="/">Home</a> &nbsp;·&nbsp; <a href="/forms.html">Printable forms</a> &nbsp;·&nbsp; <a href="/account.html">Account</a></p></div></footer>
+</body>
+</html>

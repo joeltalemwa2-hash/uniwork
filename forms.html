@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f4">
+  <title>Printable Forms | UniWork</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="/app.js" defer></script>
+  <style>
+    :root { --paper:#f8f8f4; --ink:#17231f; --muted:#68716b; --line:#dfe3dc; --green:#28634d; --coral:#f26745; --sans:"DM Sans","Segoe UI",sans-serif; --display:"Space Grotesk","Segoe UI",sans-serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:14px/1.55 var(--sans); }
+    a { color:inherit; text-decoration:none; }
+    a:hover { color:var(--coral); }
+    .wrap { width:min(900px,calc(100% - 40px)); margin:auto; }
+    header { border-bottom:1px solid var(--line); }
+    .nav { min-height:66px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand { display:flex; align-items:center; gap:9px; font:700 20px var(--display); letter-spacing:-.06em; }
+    .mark { width:30px; height:30px; display:grid; place-items:center; border-radius:9px 9px 9px 3px; background:var(--coral); color:white; }
+    .brand em { color:var(--coral); font-style:normal; }
+    .nav a:last-child { color:var(--green); font-size:12px; font-weight:700; }
+    main { padding:44px 0 74px; }
+    .eyebrow { color:var(--green); font-size:10px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin:9px 0; font:600 clamp(34px,6vw,54px)/1.05 var(--display); letter-spacing:-.06em; }
+    .lead { max-width:680px; color:var(--muted); }
+    .notice { margin:23px 0 35px; padding:13px 16px; border-left:3px solid var(--coral); background:#f0f1e9; color:#455149; font-size:12px; }
+    .form-doc { padding:25px 0 33px; border-top:1px solid var(--line); }
+    .form-head { display:flex; align-items:start; justify-content:space-between; gap:16px; margin-bottom:19px; }
+    .form-head h2 { margin:5px 0; font:600 25px var(--display); letter-spacing:-.045em; }
+    .form-head p { margin:0; color:var(--muted); font-size:12px; }
+    .fields { display:grid; grid-template-columns:1fr 1fr; gap:13px 16px; }
+    .field { display:grid; gap:5px; }
+    .field.wide { grid-column:1/-1; }
+    label { font-size:11px; font-weight:700; }
+    input,select,textarea { width:100%; min-height:39px; padding:8px 10px; border:1px solid var(--line); border-radius:0; background:white; color:var(--ink); font:13px var(--sans); }
+    textarea { min-height:92px; resize:vertical; }
+    input:focus,select:focus,textarea:focus { outline:2px solid #28634d55; border-color:var(--green); }
+    .check { display:flex; align-items:flex-start; gap:9px; margin-top:17px; color:#505c54; font-size:12px; }
+    .check input { width:16px; min-height:16px; flex:0 0 auto; margin-top:2px; accent-color:var(--green); }
+    .actions { display:flex; flex-wrap:wrap; gap:9px; margin-top:17px; }
+    button { min-height:40px; padding:0 15px; border:1px solid var(--ink); background:var(--ink); color:white; font:700 12px var(--sans); cursor:pointer; }
+    button:hover { background:var(--green); }
+    button.secondary { background:transparent; color:var(--ink); }
+    button.secondary:hover { background:var(--ink); color:white; }
+    .footnote { margin:13px 0 0; color:var(--muted); font-size:11px; }
+    footer { padding:16px 0; border-top:1px solid var(--line); color:var(--muted); font-size:11px; }
+    @media(max-width:600px) { .wrap{width:calc(100% - 32px)} main{padding-top:33px} .fields{grid-template-columns:1fr} .field.wide{grid-column:auto} .form-head{flex-direction:column} }
+    @media print {
+      @page { margin:16mm; }
+      body { background:white; color:#111; font:11pt/1.4 Arial,sans-serif; }
+      body[data-printing="student"] #employer-form, body[data-printing="employer"] #student-form { display:none !important; }
+      header,main>.wrap> :not(.form-doc),.actions,footer,.eyebrow,.notice,.footnote { display:none !important; }
+      main { padding:0; }
+      .wrap { width:100%; }
+      .form-doc { display:block; padding:0; border:0; }
+      .form-head h2 { font-size:20pt; }
+      input,select,textarea { min-height:27px; padding:4px; border:0; border-bottom:1px solid #777; background:white; color:#111; appearance:none; }
+      textarea { min-height:70px; }
+      .fields { gap:12px; }
+      .check { color:#111; }
+    }
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav"><a class="brand" href="/"><span class="mark">u.</span><span>uni<em>work</em></span></a><a data-account-link href="/account.html">Log in</a><a href="/documents.html">Information &amp; policies ↗</a></div></header>
+  <main><div class="wrap">
+    <div class="eyebrow">UniWork · Working templates</div>
+    <h1>Forms worth filling in.</h1>
+    <p class="lead">Prepare a student application or a clear job listing. Complete the fields, then print or save that form as a PDF from your browser.</p>
+    <div class="notice"><strong>Print-only templates.</strong> These forms do not submit or save what you type. Print a completed form and share it directly with its recipient. To submit an application through UniWork, sign in as a student and use Apply on an approved listing.</div>
+
+    <form class="form-doc" id="student-form" autocomplete="on">
+      <div class="form-head"><div><div class="eyebrow">Template 01 · Student</div><h2>Student application</h2><p>Use one copy for each opportunity. Do not include sensitive personal information unless the employer needs it.</p></div></div>
+      <div class="fields">
+        <div class="field"><label for="student-name">Full name</label><input id="student-name" name="student-name" autocomplete="name"></div>
+        <div class="field"><label for="student-email">Email address</label><input id="student-email" name="student-email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="student-phone">Phone (optional)</label><input id="student-phone" name="student-phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="student-employer">Employer and role</label><input id="student-employer" name="student-employer"></div>
+        <div class="field"><label for="student-school">University / institution</label><input id="student-school" name="student-school"></div>
+        <div class="field"><label for="student-course">Programme and year of study</label><input id="student-course" name="student-course"></div>
+        <div class="field"><label for="student-location">Preferred location</label><input id="student-location" name="student-location"></div>
+        <div class="field"><label for="student-hours">Weekly availability</label><input id="student-hours" name="student-hours" placeholder="Days and hours"></div>
+        <div class="field wide"><label for="student-skills">Relevant skills and experience</label><textarea id="student-skills" name="student-skills"></textarea></div>
+        <div class="field wide"><label for="student-motivation">Why are you interested in this role?</label><textarea id="student-motivation" name="student-motivation"></textarea></div>
+      </div>
+      <label class="check"><input type="checkbox" name="student-confirm"><span>I confirm that the information above is accurate and understand that I will share this form directly with the employer named above.</span></label>
+      <div class="actions"><button type="button" data-print="student">Print / save as PDF</button><button class="secondary" type="reset">Clear form</button></div>
+      <p class="footnote">Before sharing, verify the opportunity and employer. Keep a copy for your records.</p>
+    </form>
+
+    <form class="form-doc" id="employer-form" autocomplete="on">
+      <div class="form-head"><div><div class="eyebrow">Template 02 · Employer</div><h2>Opportunity listing brief</h2><p>Prepare a complete, transparent role description for students to review.</p></div></div>
+      <div class="fields">
+        <div class="field"><label for="company-name">Organization name</label><input id="company-name" name="company-name" autocomplete="organization"></div>
+        <div class="field"><label for="contact-name">Contact person</label><input id="contact-name" name="contact-name" autocomplete="name"></div>
+        <div class="field"><label for="contact-email">Contact email</label><input id="contact-email" name="contact-email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="contact-phone">Contact phone (optional)</label><input id="contact-phone" name="contact-phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="role-title">Role title</label><input id="role-title" name="role-title"></div>
+        <div class="field"><label for="role-type">Opportunity type</label><select id="role-type" name="role-type"><option value="">Choose a type</option><option>Internship</option><option>Part-time</option><option>Graduate role</option><option>Project / contract</option></select></div>
+        <div class="field"><label for="role-location">Location / remote arrangement</label><input id="role-location" name="role-location"></div>
+        <div class="field"><label for="role-pay">Compensation and pay frequency</label><input id="role-pay" name="role-pay"></div>
+        <div class="field"><label for="role-hours">Hours and schedule</label><input id="role-hours" name="role-hours"></div>
+        <div class="field"><label for="role-duration">Duration and closing date</label><input id="role-duration" name="role-duration"></div>
+        <div class="field wide"><label for="role-description">Responsibilities and learning outcomes</label><textarea id="role-description" name="role-description"></textarea></div>
+        <div class="field wide"><label for="role-requirements">Skills, eligibility, and application instructions</label><textarea id="role-requirements" name="role-requirements"></textarea></div>
+      </div>
+      <label class="check"><input type="checkbox" name="employer-confirm"><span>I confirm I am authorized to share this information and that the listing accurately describes the opportunity, compensation, and application process.</span></label>
+      <div class="actions"><button type="button" data-print="employer">Print / save as PDF</button><button class="secondary" type="reset">Clear form</button></div>
+      <p class="footnote">Do not include applicant information in this listing brief. A future hosted form should include suitable access controls and a privacy notice.</p>
+    </form>
+  </div></main>
+  <footer><div class="wrap">UniWork · Forms do not submit information. &nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/documents.html#privacy">Privacy</a></div></footer>
+  <script>
+    document.querySelectorAll("[data-print]").forEach(button => button.addEventListener("click", () => {
+      document.body.dataset.printing = button.dataset.print;
+      window.print();
+    }));
+    window.addEventListener("afterprint", () => delete document.body.dataset.printing);
+  </script>
+</body>
+</html>

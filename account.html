@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#28634d">
+  <meta name="description" content="Sign in to your UniWork student or employer account.">
+  <title>Your Account | UniWork</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f8f8f4;--ink:#17231f;--muted:#68716b;--line:#dfe3dc;--green:#28634d;--coral:#f26745;--lime:#d3f177;--sans:"DM Sans","Segoe UI",sans-serif;--display:"Space Grotesk","Segoe UI",sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.55 var(--sans)}a{color:inherit;text-decoration:none}a:hover{color:var(--coral)}button,input,select,textarea{font:inherit}.wrap{width:min(1050px,calc(100% - 42px));margin:auto}.header{border-bottom:1px solid var(--line);background:#f8f8f4f2}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:9px;font:700 20px var(--display);letter-spacing:-.06em}.mark{width:30px;height:30px;display:grid;place-items:center;border-radius:9px 9px 9px 3px;background:var(--coral);color:white;letter-spacing:0}.brand em{color:var(--coral);font-style:normal}.navlinks{display:flex;gap:20px;font-size:12px;font-weight:600}main{padding:52px 0 78px}.eyebrow{color:var(--green);font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{margin:9px 0;font:600 clamp(36px,5vw,57px)/1.02 var(--display);letter-spacing:-.06em}h1 span{color:var(--coral);font-family:Georgia,serif;font-style:italic;font-weight:400}.lead{max-width:580px;color:var(--muted)}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(310px,.82fr);gap:58px;align-items:start;margin-top:35px}.promise{padding:22px 0;border-top:1px solid var(--line)}.promise h2{margin:0 0 9px;font:600 20px var(--display);letter-spacing:-.03em}.promise p,.promise li{color:var(--muted);font-size:13px}.promise ul{padding-left:19px}.account-box{padding:24px;border:1px solid var(--line);background:#fff}.tabs{display:flex;gap:6px;margin-bottom:20px;border-bottom:1px solid var(--line)}.tab{padding:8px 12px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);font-size:12px;font-weight:700;cursor:pointer}.tab[aria-selected="true"]{border-color:var(--coral);color:var(--ink)}.form{display:grid;gap:13px}.field{display:grid;gap:6px}.field label{font-size:11px;font-weight:700}.field input,.field select,.field textarea{width:100%;min-height:41px;padding:9px 10px;border:1px solid var(--line);border-radius:0;background:#fff;color:var(--ink)}.field textarea{min-height:90px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #28634d55;border-color:var(--green)}.button{min-height:42px;padding:0 15px;border:1px solid transparent;border-radius:3px;background:var(--ink);color:#fff;font-weight:700;cursor:pointer}.button:hover{background:var(--green)}.button:disabled{opacity:.55;cursor:wait}.button-coral{background:var(--coral)}.button-small{min-height:35px;padding:0 11px;font-size:11px}.form-note,.status{min-height:18px;margin:0;color:var(--muted);font-size:11px}.status.error{color:#a33929}.status.success{color:var(--green)}.status{padding:8px 0}.hidden{display:none!important}.dashboard{margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}.dashboard-head{display:flex;align-items:start;justify-content:space-between;gap:15px}.dashboard-head h2{margin:4px 0;font:600 27px var(--display);letter-spacing:-.04em}.user-line{color:var(--muted);font-size:12px}.panel{padding:20px 0;border-top:1px solid var(--line)}.panel h3{margin:0 0 13px;font:600 18px var(--display)}.listing-form{display:grid;grid-template-columns:1fr 1fr;gap:11px}.listing-form .wide{grid-column:1/-1}.data-list{display:grid;gap:9px}.data-row{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;padding:12px;border:1px solid var(--line);background:#fff}.data-row h4{margin:0 0 3px;font:600 14px var(--display)}.data-row p{margin:0;color:var(--muted);font-size:11px}.badge{display:inline-block;margin-top:5px;padding:3px 7px;background:#edf3e8;color:#455c48;font-size:10px;font-weight:700;text-transform:capitalize}.empty{padding:15px 0;color:var(--muted);font-size:12px}.footer{padding:17px 0;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:15px}.footer p{margin:0}
+    @media(max-width:760px){.wrap{width:calc(100% - 34px)}.nav{align-items:flex-start;flex-direction:column;padding:12px 0}.navlinks{gap:8px 14px;flex-wrap:wrap}main{padding:35px 0 54px}.columns{grid-template-columns:1fr;gap:18px}.account-box{padding:18px}.listing-form{grid-template-columns:1fr}.listing-form .wide{grid-column:auto}.footer-inner{flex-direction:column}}
+  </style>
+  <script src="/app.js" defer></script>
+  <script src="/account.js" defer></script>
+</head>
+<body data-page="account">
+  <header class="header"><div class="wrap nav"><a class="brand" href="/"><span class="mark">u.</span><span>uni<em>work</em></span></a><nav class="navlinks" aria-label="Site navigation"><a href="/">Find work</a><a href="/documents.html#students">Students</a><a href="/documents.html#employers">Employers</a><a href="/documents.html#privacy">Privacy</a></nav></div></header>
+  <main class="wrap">
+    <div class="eyebrow">UniWork · Your next step</div>
+    <h1>Good work starts<br><span>with a good account.</span></h1>
+    <p class="lead">Sign in to apply for opportunities, or create a student or employer account to get started.</p>
+    <p id="account-status" class="status" role="status" aria-live="polite"></p>
+    <section class="columns" id="auth-view">
+      <div class="promise"><h2>A platform with students in mind.</h2><p>Save your applications, share your opportunities, and stay connected to work that fits around university.</p><ul><li>Students apply directly to active listings.</li><li>Employers can draft roles and submit them for review.</li><li>Approved jobs appear across the site.</li></ul></div>
+      <div class="account-box">
+        <section class="hidden" id="owner-setup">
+          <div class="eyebrow">One-time setup · this local server</div><h2>Set up your site owner account</h2>
+          <p class="form-note">Do this before opening the server to anyone else. The first owner account can review job listings and manage the site.</p>
+          <form class="form" id="owner-setup-form">
+            <div class="field"><label for="owner-name">Your name</label><input id="owner-name" name="name" autocomplete="name" maxlength="80" required></div>
+            <div class="field"><label for="owner-email">Email address</label><input id="owner-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="owner-password">Password</label><input id="owner-password" name="password" type="password" autocomplete="new-password" minlength="12" maxlength="72" required><span class="form-note">Use at least 12 characters. This one-time setup is only enabled on your local server.</span></div>
+            <button class="button button-coral" type="submit">Create owner account</button>
+          </form>
+        </section>
+        <div id="regular-auth">
+        <div class="tabs" role="tablist" aria-label="Account access"><button class="tab" id="login-tab" type="button" role="tab" aria-selected="true">Log in</button><button class="tab" id="register-tab" type="button" role="tab" aria-selected="false">Create account</button></div>
+        <form class="form" id="login-form">
+          <div class="field"><label for="login-email">Email address</label><input id="login-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="login-password">Password</label><input id="login-password" name="password" type="password" autocomplete="current-password" required></div>
+          <button class="button button-coral" type="submit">Log in</button><p class="form-note">Your account works across the UniWork pages on this server.</p>
+        </form>
+        <form class="form hidden" id="register-form">
+          <div class="field"><label for="register-name">Your name</label><input id="register-name" name="name" autocomplete="name" maxlength="80" required></div>
+          <div class="field"><label for="register-email">Email address</label><input id="register-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="register-role">I am joining as a</label><select id="register-role" name="role" required><option value="student">Student</option><option value="employer">Employer</option></select></div>
+          <div class="field"><label for="register-password">Password</label><input id="register-password" name="password" type="password" autocomplete="new-password" minlength="12" maxlength="72" required><span class="form-note">Use at least 12 characters.</span></div>
+          <button class="button button-coral" type="submit">Create account</button><p class="form-note">Registration stores your name, email, and password hash on this site's server.</p>
+        </form>
+        </div>
+      </div>
+    </section>
+    <section class="dashboard hidden" id="dashboard" aria-live="polite">
+      <div class="dashboard-head"><div><div class="eyebrow" id="account-role"></div><h2 id="dashboard-title">Your account</h2><p class="user-line" id="account-identity"></p></div><button class="button button-small" id="logout-button" type="button">Log out</button></div>
+      <p id="dashboard-status" class="status" role="status" aria-live="polite"></p>
+      <section class="panel hidden" id="student-panel"><h3>Your applications</h3><div class="data-list" id="application-list"></div><p class="form-note"><a href="/#opportunities">Browse open opportunities ↗</a></p></section>
+      <section class="panel hidden" id="employer-panel">
+        <h3>Post an opportunity</h3>
+        <p class="form-note">New listings wait for owner review before they appear publicly.</p>
+        <form class="listing-form" id="job-form">
+          <div class="field"><label for="job-title">Role title</label><input id="job-title" name="title" maxlength="120" required></div>
+          <div class="field"><label for="job-company">Organization</label><input id="job-company" name="company" maxlength="100" required></div>
+          <div class="field"><label for="job-location">Location</label><input id="job-location" name="location" maxlength="100" placeholder="Kampala or Remote" required></div>
+          <div class="field"><label for="job-type">Opportunity type</label><select id="job-type" name="type"><option>Internship</option><option>Part-time</option><option>Graduate role</option><option>Project / contract</option></select></div>
+          <div class="field"><label for="job-pay">Compensation</label><input id="job-pay" name="pay" maxlength="200" placeholder="Amount and frequency"></div>
+          <div class="field"><label for="job-schedule">Hours / schedule</label><input id="job-schedule" name="schedule" maxlength="200"></div>
+          <div class="field wide"><label for="job-description">Responsibilities</label><textarea id="job-description" name="description" maxlength="4000" required></textarea></div>
+          <div class="field wide"><label for="job-requirements">Skills and application requirements</label><textarea id="job-requirements" name="requirements" maxlength="4000"></textarea></div>
+          <div class="wide"><button class="button button-coral" type="submit">Submit for review</button></div>
+        </form>
+        <div class="panel"><h3>Your listings</h3><div class="data-list" id="employer-list"></div></div>
+        <div class="panel"><h3>Applications received</h3><div class="data-list" id="received-application-list"></div></div>
+      </section>
+      <section class="panel hidden" id="admin-panel">
+        <div class="panel"><h3>Homepage content</h3><form id="site-content-form" class="listing-form"><div class="field wide"><label for="site-title">Headline</label><input id="site-title" name="title" maxlength="90" required></div><div class="field wide"><label for="site-description">Introduction</label><textarea id="site-description" name="description" maxlength="240" required></textarea></div><div class="wide"><button class="button button-coral" type="submit">Save homepage text</button></div></form></div>
+        <h3>Review listings</h3><div class="data-list" id="moderation-list"></div>
+        <div class="panel"><h3>Registered accounts</h3><div class="data-list" id="user-list"></div></div>
+      </section>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><p>UniWork · <a href="/documents.html#privacy">Privacy</a> · <a href="/documents.html#terms">Terms</a></p><p><a href="/">Return to opportunities</a></p></div></footer>
+</body>
+</html>
